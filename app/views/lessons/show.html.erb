@@ -9,7 +9,8 @@
   <ul>
     <% @lesson.sections.each do |section| %>
       <li>
-        <%= section.name %>
+        <%= section.name %> |
+        <%= link_to 'Edit', edit_lesson_section_path(@lesson, section) %>
       </li>
     <% end %>
   </ul>
