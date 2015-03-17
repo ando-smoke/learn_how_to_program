@@ -10,7 +10,9 @@
     <% @lesson.sections.each do |section| %>
       <li>
         <%= section.name %> |
-        <%= link_to 'Edit', edit_lesson_section_path(@lesson, section) %>
+        <%= link_to 'Edit', edit_lesson_section_path(@lesson, section) %> |
+        <%= link_to 'Delete', lesson_section_path(@lesson, section),
+              :data => { :method => 'delete' } %>
       </li>
     <% end %>
   </ul>

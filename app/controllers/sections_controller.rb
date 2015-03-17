@@ -31,6 +31,14 @@ class SectionsController < ApplicationController
     end
   end
 
+  def destroy
+    @lesson = Lesson.find(params[:lesson_id])
+    @section = @lesson.sections.find(params[:id])
+    @section.destroy
+    flash[:notice] = 'Section successfully deleted!'
+    redirect_to lesson_path(@lesson)
+  end
+
   private
     def section_params
       params.require(:section).permit(:name)
