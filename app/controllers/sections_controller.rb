@@ -1,4 +1,9 @@
 class SectionsController < ApplicationController
+  def show
+    @lesson = Lesson.find(params[:lesson_id])
+    @section = Section.find(params[:id])
+  end
+
   def new
     @lesson = Lesson.find(params[:lesson_id])
     @section = @lesson.sections.new
