@@ -1,8 +1,26 @@
 <% content_for(:title, 'Lesson | Learn How To Program') %>
 
 <h1><%= @lesson.name %></h1>
-
 <h4><%= @lesson.description %></h4>
+
+<% if @lesson.sections.any? %>
+  <h4>Sections:</h4>
+
+  <ul>
+    <% @lesson.sections.each do |section| %>
+      <li>
+        <%= section.name %>
+      </li>
+    <% end %>
+  </ul>
+
+<% else %>
+  <p>No sections entered!</p>
+<% end %>
+
+<p><%= link_to 'Add New Section', new_lesson_section_path(@lesson) %></p>
+
+<hr />
 
 <p><%= link_to 'Edit Lesson', edit_lesson_path(@lesson) %></p>
 <p><%= link_to 'Delete Lesson', lesson_path(@lesson),
