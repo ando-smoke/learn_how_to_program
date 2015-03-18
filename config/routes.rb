@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :lessons do
     resources :sections, except: [:index] do
-      resources :topics, except: [:show, :index]
+      resources :topics, except: [:index]
     end
   end
 end
