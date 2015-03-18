@@ -11,7 +11,7 @@
         <%= link_to topic.name,
           lesson_section_topic_path(@lesson, @section, topic) %> |
         <%= link_to 'Edit',
-          edit_lesson_section_topic_path(@lesson, @section, topic) %>
+          edit_lesson_section_topic_path(@lesson, @section, topic) %> |
         <%= link_to 'Delete',
           lesson_section_topic_path(@lesson, @section, topic),
           :data => { :method => 'delete' } %>
