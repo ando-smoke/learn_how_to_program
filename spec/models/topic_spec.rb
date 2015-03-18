@@ -24,20 +24,20 @@ describe Topic do
     end
   end
 
-  # context '#previous' do
-  #   it 'returns the topic with the next-lowest sort_id than ' \
-  #     'the current topic' do
-  #     current_topic = Topic.create(
-  #       name: 'topic1',
-  #       topic_text: 'blah blah blah',
-  #       sort_id: 1
-  #     )
-  #     next_topic = Topic.create(
-  #       name: 'topic2',
-  #       topic_text: 'blah blah blah',
-  #       sort_id: 2
-  #     )
-  #     expect(next_topic.previous).to eq current_topic
-  #   end
-  # end
+  context '#previous' do
+    it 'returns the topic with the next-lowest sort_id than ' \
+      'the current topic' do
+      current_topic = Topic.create(
+        name: 'topic1',
+        topic_text: 'blah blah blah',
+        sort_id: 1
+      )
+      next_topic = Topic.create(
+        name: 'topic2',
+        topic_text: 'blah blah blah',
+        sort_id: 2
+      )
+      expect(next_topic.previous).to eq current_topic
+    end
+  end
 end
