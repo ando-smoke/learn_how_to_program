@@ -41,6 +41,15 @@ class TopicsController < ApplicationController
     end
   end
 
+  def destroy
+    @lesson = Lesson.find(params[:lesson_id])
+    @section = @lesson.sections.find(params[:section_id])
+    @topic = @section.topics.find(params[:id])
+    @topic.destroy
+    flash[:notice] = 'Topic successfully deleted!'
+    redirect_to lesson_section_path(@lesson, @section)
+  end
+
   private
     def topic_params
       params.require(:topic).permit(:name, :topic_text)
