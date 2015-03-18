@@ -17,6 +17,11 @@
   <p>No topics entered!</p>
 <% end %>
 
+<p><%= link_to 'Add New Topic',
+  new_lesson_section_topic_path(@lesson, @section) %></p>
+
+<hr />
+
 <p><%= link_to 'Return to ' + @lesson.name, lesson_path(@lesson) %></p>
 
 <p><%= link_to 'Return to All Lessons', lessons_path %></p>

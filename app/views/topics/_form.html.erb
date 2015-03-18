@@ -1,0 +1,9 @@
+<%= render 'layouts/errors', object: @topic %>
+
+<%= form_for [@lesson, @section, @topic] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :topic_text %>
+  <%= f.text_field :topic_text %>
+  <%= f.submit %>
+<% end %>
