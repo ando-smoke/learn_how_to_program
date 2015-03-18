@@ -9,7 +9,9 @@
     <% @section.topics.each do |topic| %>
       <li>
         <%= link_to topic.name,
-          lesson_section_topic_path(@lesson, @section, topic) %>
+          lesson_section_topic_path(@lesson, @section, topic) %> |
+        <%= link_to 'Edit',
+          edit_lesson_section_topic_path(@lesson, @section, topic) %>
       </li>
     <% end %>
   </ul>
