@@ -1,0 +1,10 @@
+<% content_for(:title, 'Topic | Learn How To Program') %>
+
+<h1><%= @topic.name %></h1>
+
+<p><%= @topic.topic_text %></p>
+
+<p><%= link_to 'Return to ' + @section.name,
+  lesson_section_path(@lesson, @section) %></p>
+
+<p><%= link_to 'Return to All Lessons', lessons_path %></p>
