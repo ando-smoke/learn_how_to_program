@@ -4,6 +4,11 @@
 
 <p><%= @topic.topic_text %></p>
 
+<p><%= link_to 'Previous lesson',
+  lesson_section_topic_path(@lesson, @section, @topic.previous) %> |
+  <%= link_to 'Next lesson',
+    lesson_section_topic_path(@lesson, @section, @topic.next) %>
+
 <hr />
 
 <p><%= link_to 'Return to ' + @section.name,
