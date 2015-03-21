@@ -55,7 +55,7 @@ rake db:test:prepare
 ```
 
 At the time of initial creation of this application, Ruby
-version 2.2.0 was used.
+version 2.2.0 was used along with Ruby on Rails 4.2.0.
 
 Database Schema
 -----
@@ -91,9 +91,6 @@ TABLES:
     created_at (timestamp)
     updated_at (timestamp)
 ```
-
-Finally, this application was finalized within a Ruby version 2.0.0
-environment using Ruby on Rails version 4.2.0.
 
 Usage
 -----
